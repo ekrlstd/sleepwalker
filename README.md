@@ -1,6 +1,6 @@
 # sleepwalker
 
-> A GitHub App built with [Probot](https://github.com/probot/probot) that Detects stale references in AGENTS.md, CLAUDE.md, and .cursorrules and opens PRs to fix them. No AI, no guesswork, only logic.
+> Detects stale references in AGENTS.md, CLAUDE.md, and .cursorrules and opens PRs to fix them. No AI, no guesswork, only logic.
 
 ## Setup
 
@@ -30,4 +30,4 @@ For more, check out the [Contributing Guide](CONTRIBUTING.md).
 
 ## License
 
-[ISC](LICENSE) © 2026 ekrlstd
+[AGPL-3.0](LICENSE) © 2026 ekrlstd
