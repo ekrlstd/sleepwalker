@@ -2,6 +2,7 @@ import { Probot } from "probot";
 
 export default (app: Probot) => {
   app.on("issues.opened", async (context) => {
+    console.log(context);
     const issueComment = context.issue({
       body: "Thanks for opening this issue!",
     });
