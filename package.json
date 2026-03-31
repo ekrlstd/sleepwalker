@@ -5,7 +5,7 @@
   "description": "Detects stale references in AGENTS.md, CLAUDE.md, and .cursorrules and opens PRs to fix them. No AI, no guesswork, only logic.",
   "author": "ekrlstd",
   "license": "ISC",
-  "homepage": "https://github.com//",
+  "homepage": "https://github.com/ekrlstd/sleepwalker/",
   "keywords": [
     "probot",
     "github",
