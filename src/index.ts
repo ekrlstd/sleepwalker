@@ -1,16 +1,28 @@
 import { Probot } from "probot";
 
 export default (app: Probot) => {
-  app.on("issues.opened", async (context) => {
-    console.log(context);
-    const issueComment = context.issue({
-      body: "Thanks for opening this issue!",
-    });
-    await context.octokit.issues.createComment(issueComment);
-  });
-  // For more information on building apps:
-  // https://probot.github.io/docs/
+  // takes an event (push) and the context which
+  // has all info from the push event
+  app.on("push", async (context) => {
+    app.log.info(context.payload);
 
-  // To get your app running against GitHub, see:
-  // https://probot.github.io/docs/development/
+    // multi-level deconstruction
+    // of the context object
+    const {
+      payload: {
+        before,
+        after,
+        repository: {
+          // rename repository.name and
+          // repository.owner.name to avoid conflicts
+          name: repoName,
+          owner: { name: ownerName },
+        },
+      },
+    } = context;
+
+    console.log(before, after, repoName, ownerName);
+    // we need owner, repo, before and after SHA
+    // GET /repos/{owner}/{repo}/compare/{BASE}...{HEAD}
+  });
 };
