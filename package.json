@@ -18,7 +18,8 @@
     "dev": "tsc && probot run ./lib/index.js"
   },
   "dependencies": {
-    "probot": "^13.4.5"
+    "probot": "^13.4.5",
+    "tsx": "^4.21.0"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",

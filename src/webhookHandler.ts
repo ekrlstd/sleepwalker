@@ -27,8 +27,8 @@ export async function onPush(context: Context<"push">) {
     basehead: baseHeadConcat,
   };
 
-  const diffData =
+  const diffs =
     await context.octokit.repos.compareCommitsWithBasehead(compareObject);
 
-  return diffData.data.files;
+  return diffs.data.files;
 }
