@@ -6,7 +6,7 @@ export default (app: Probot) => {
   // takes an event (push) and octokit context
   app.on("push", async (context) => {
     const diffData = await onPush(context);
-    const res = analyzeDiffs(diffData);
-    console.log(res);
+    const diffResult = analyzeDiffs(diffData);
+    console.log(diffResult);
   });
 };
